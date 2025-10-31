@@ -10,3 +10,5 @@ echo "OS: $(cat /etc/os-release | head -1 | cut -d '"' -f2)"
 echo "kernel: $(uname -r)"
 
 echo "CPU Info: $(cat /proc/cpuinfo | awk -F ':' 'NR==5 {print $2}')"
+
+echo "Memory Used: $(free -h | awk '/Mem:/ {print $3 "/" $2 " used"}')"
