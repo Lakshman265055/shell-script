@@ -4,7 +4,7 @@ if [[ -z "$1" ]]; then
     echo "script usage: ${0} <folder/path>"
     exit 1
 
-if [[ ! -d "$1"]]; then
+if [[ ! -d "$1" ]]; then
     echo " folder is not preset please check thr path"
     exit 1
 
