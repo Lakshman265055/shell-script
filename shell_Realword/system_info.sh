@@ -12,3 +12,5 @@ echo "kernel: $(uname -r)"
 echo "CPU Info: $(cat /proc/cpuinfo | awk -F ':' 'NR==5 {print $2}')"
 
 echo "Memory Used: $(free -h | awk '/Mem:/ {print $3 "/" $2 " used"}')"
+
+echo "Disk Usage: $(df -h | awk '$NF=="/" {print "Disk Usage:", $1, $5}')"
